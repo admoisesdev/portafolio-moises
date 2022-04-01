@@ -1,4 +1,14 @@
-/* Custom Properties */
+/*? ********** Fluid Text ********** */
+:root {
+  --step-6: clamp(0.96rem, calc(0.89rem + 0.10vw), 0.91rem);
+  --step-5: clamp(1.20rem, calc(1.05rem + 0.21vw), 1.09rem);
+  --step-4: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.50rem);
+  --step-3: clamp(1.58rem, calc(1.46rem + 0.59vw), 1.88rem);
+  --step-2: clamp(1.89rem, calc(1.71rem + 0.89vw), 2.34rem);
+  --step-1: clamp(2.27rem, calc(2.01rem + 1.29vw), 2.93rem);
+}
+
+/*? ********** Custom Properties ********** */
 
 :root {
   --first-color: #000080;
@@ -22,7 +32,7 @@
   --header-height: 4rem;
 }
 
-/* Reseteo */
+/*? ********** Reset ********** */
 
 html {
   box-sizing: border-box;
@@ -55,32 +65,32 @@ a:hover {
 
 h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: var(--step-1);
 }
 
 h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--step-2);
 }
 
 h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: var(--step-3);
 }
 
 h4 {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--step-4);
 }
 
 h5 {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: var(--step-5);
 }
 
 h6 {
   margin: 0;
-  font-size: 0.7rem;
+  font-size: var(--step-6);
 }
 
 img {
@@ -90,9 +100,17 @@ img {
 
 p {
   line-height: 1.6;
+  font-size: var(--step--1);
 }
 
-/* Utilidades */
+
+
+/*? ********** Components ********** */
+
+
+
+
+/*? ********** Utilities ********** */
 
 .box-shadow-1 {
   box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, 0.25);
@@ -127,11 +145,11 @@ p {
 }
 
 .section-title {
-  border-top: thin solid var(--first-color);
-  border-bottom: thin solid var(--first-color);
+  border-right: thin solid var(--second-color);
+  border-bottom: thin solid var(--second-color);
   margin: 2rem auto;
   padding: .5rem;
-  width: 250px;
+  width: 300px;
   text-align: center;
   color: var(--title-color);
 }
@@ -151,3 +169,62 @@ p {
 .text-right {
   text-align: right;
 }
+
+@media screen and (min-width: 1024px) {
+  .full-lg-screen {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
+}
+
+
+/*? ********** Site Styles ********** */
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 1rem;
+  background-color: var(--first-color);
+  color: var(--second-color);
+  font-size: 2rem;
+  font-weight: 600;
+
+}
+
+.header button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: thin solid var(--second-color);
+}
+
+.menu-btn svg{
+  width: 2rem;
+  height: 2rem;
+}
+
+.menu-btn path{
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--second-color);
+}
+
+.header nav{
+  display: none;
+}
+
+
+
