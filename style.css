@@ -107,6 +107,77 @@ p {
 
 /*? ********** Components ********** */
 
+/* *** Menu *** */
+.menu{
+  position: fixed;
+  left: 0;
+  bottom: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--first-color);
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu a{
+  color: var(--second-color);
+  padding: 1rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.menu a:hover{
+  background-color: var(--second-color);
+  color: var(--black-color);
+}
+
+.menu-btn{
+  height: 2.125rem;
+  background-color: transparent;
+  border: thin solid var(--second-color);
+}
+
+.menu-btn path{
+  width: 20px;
+  height: 16px;
+  fill: var(--second-color);
+}
+
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu{
+    position: static;
+    flex-direction: row;
+    width: auto;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu a{
+    padding: 0;
+    padding-right: 1rem;
+  }
+
+  .menu a:hover{
+    background-color: inherit;
+    color: var(--white-color);
+  }
+
+  .menu a:last-child{
+    padding-right: 0;
+  }
+
+  .menu-btn{
+    display: none;
+  }
+}
 
 
 
@@ -192,39 +263,37 @@ p {
 
 /*? ********** Site Styles ********** */
 .header{
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
   height: var(--header-height);
   padding: 1rem;
   background-color: var(--first-color);
-  color: var(--second-color);
-  font-size: 2rem;
-  font-weight: 600;
-
+  
 }
 
-.header button{
+.header .container{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: transparent;
-  border: thin solid var(--second-color);
 }
 
-.menu-btn svg{
-  width: 2rem;
-  height: 2rem;
+.logo a{
+  color: var(--second-color);
+  font-weight: 600;
+  font-size: 2rem;
 }
 
-.menu-btn path{
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: var(--second-color);
+
+/* ***** Version Desktop ***** */
+@media screen and (min-width: 1024px) {
+  .header{
+    top: 0;
+  }
 }
 
-.header nav{
-  display: none;
-}
 
 
 
