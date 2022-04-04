@@ -108,6 +108,58 @@ p {
 
 /*? ********** Components ********** */
 
+/* *** Contact Form *** */
+.contact-form{
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.contact-form > *:not(input[type="submit"],.loader){
+  display: block;
+  width: 100%;
+  padding: .5rem 0;
+  margin-bottom: 1rem;
+  border: thin solid var(--gray-dark-color);
+  outline: none;
+  font-family: var(--font);
+  font-size: .85rem;
+}
+
+.contact-form > textarea{
+  grid-column: span 2;
+  resize: none;
+}
+
+.contact-form > input[type="submit"]{
+  grid-column: span 2;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.contact-form input[type="submit"]:hover {
+  opacity: .75;
+}
+
+.contact-form *::placeholder {
+  color: var(--gray-dark-color);
+  padding-left: .5rem;
+}
+
+.loader img{
+  width: 4rem;
+  height: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .contact-form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1rem;
+    width: 80%;
+  }
+}
+
 
 /* *** Hero Image **** */
 .hero-image{
