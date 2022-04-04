@@ -99,6 +99,7 @@ img {
 }
 
 p {
+  margin: 0;
   line-height: 1.6;
   font-size: var(--step--1);
 }
@@ -214,6 +215,39 @@ p {
 }
 
 
+/* *** Progress Bar ***  */
+
+progress{
+  background-color: var(--gray-color);
+  width: 100%;
+}
+
+/* Seleccionando Progress Bar */
+progress::-webkit-progress-bar{
+  background-color: var(--gray-color);
+}
+
+/* Seleccionando lo que avanza en la Progress Bar */
+progress::-webkit-progress-value{
+  background-color: var(--gray-dark-color);
+}
+
+/* Seleccionando lo que avanza en la Progress Bar en Firefox*/
+progress::-moz-progress-bar{
+  background-color: var(--gray-dark-color);
+}
+
+.progress-bar{
+  margin-top: 1rem;
+}
+
+.progress-bar p{
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+
 
 /*? ********** Utilities ********** */
 
@@ -296,6 +330,9 @@ p {
 
 
 /*? ********** Site Styles ********** */
+
+
+/* *** Header *** */
 .header{
   position: fixed;
   left: 0;
@@ -321,8 +358,29 @@ p {
 }
 
 
+/* *** about *** */
+.about{
+  margin: 2rem auto;
+}
+
+.about article{
+  margin-bottom: 2rem;
+}
+
+
 /* ***** Version Desktop ***** */
 @media screen and (min-width: 1024px) {
+  .about{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .about article{
+    margin-bottom: 0;
+  }
+
   .header{
     position: sticky;
     top: 0;
