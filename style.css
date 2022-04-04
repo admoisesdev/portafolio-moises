@@ -381,25 +381,53 @@ progress::-moz-progress-bar{
   object-fit: cover;
 }
 
-
-/* *** skills *** */
-.skills{
-  padding: 2rem 0;
-  background-color: var(--gray-light-color);
-  width: 100%;
+/* *** contact *** */
+.contact{
+  padding-top: 0;
 }
 
-.skills > .container{
-  row-gap: 2rem;
-  column-gap: 3rem;
+.contact-cards{
+  margin-bottom: 3rem;
 }
 
-.skill h3{
+.contact-card{
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.contact-card > address{
+  font-size: 1.5rem;
+}
+
+.contact-card h5{
   text-transform: uppercase;
 }
 
-.skill img{
+.contact-card img{
   margin: 1rem auto;
+}
+
+.github,
+.linkedin,
+.twitter,
+.whatsapp{
+  color: var(--text-color);
+}
+
+.github:hover{
+  color: var(--github-color);
+}
+
+.linkedin:hover{
+  color: var(--linkedin-color);
+}
+
+.twitter:hover{
+  color: var(--twitter-color);
+}
+
+.whatsapp:hover{
+  color: var(--whatsapp-color);
 }
 
 
@@ -425,7 +453,6 @@ progress::-moz-progress-bar{
   height: 100%;
   object-fit: cover;
 }
-
 
 .portfolio-card-info{
   position: absolute;
@@ -454,10 +481,39 @@ progress::-moz-progress-bar{
   display: none;
 }
 
+/* *** skills *** */
+.skills{
+  padding: 2rem 0;
+  background-color: var(--gray-light-color);
+  width: 100%;
+}
+
+.skills > .container{
+  row-gap: 2rem;
+  column-gap: 3rem;
+}
+
+.skill h3{
+  text-transform: uppercase;
+}
+
+.skill img{
+  margin: 1rem auto;
+}
 
 
 /* ***** Version Tablet ***** */
 @media screen and (min-width: 768px) {
+  .contact-cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+  }
+  
+  .contact-card{
+    margin-bottom: 0;
+  }
+
   .portfolio > .container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -486,6 +542,11 @@ progress::-moz-progress-bar{
   .about article{
     margin-bottom: 0;
   }
+
+  .contact-cards{
+    grid-template-columns: repeat(4,1fr);
+  }
+
 
   .header{
     position: sticky;
