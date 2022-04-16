@@ -59,7 +59,7 @@ a {
   transition: all 0.5s ease-out;
 }
 
-a:hover {
+a:active {
   opacity: 0.75;
 }
 
@@ -137,7 +137,7 @@ p {
   transition: all .5s ease-in-out;
 }
 
-.contact-form input[type="submit"]:hover {
+.contact-form input[type="submit"]:active {
   opacity: .75;
 }
 
@@ -216,7 +216,7 @@ p {
   font-weight: 600;
 }
 
-.menu a:hover{
+.menu a:active{
   background-color: var(--second-color);
   color: var(--black-color);
 }
@@ -250,11 +250,6 @@ p {
   .menu a{
     padding: 0;
     padding-right: 1rem;
-  }
-
-  .menu a:hover{
-    background-color: inherit;
-    color: var(--white-color);
   }
 
   .menu a:last-child{
@@ -466,19 +461,19 @@ progress::-moz-progress-bar{
   color: var(--text-color);
 }
 
-.github:hover{
+.github:active{
   color: var(--github-color);
 }
 
-.linkedin:hover{
+.linkedin:active{
   color: var(--linkedin-color);
 }
 
-.twitter:hover{
+.twitter:active{
   color: var(--twitter-color);
 }
 
-.whatsapp:hover{
+.whatsapp:active{
   color: var(--whatsapp-color);
 }
 
@@ -530,7 +525,7 @@ progress::-moz-progress-bar{
 }
 
 .modal{
-  display: none;
+  /* display: none; */
 }
 
 /* *** skills *** */
@@ -631,6 +626,40 @@ progress::-moz-progress-bar{
   .skills .section-title{
     grid-column: span 4;
   }
+  
+}
+
+/* ***** hover solo para versión Desktop ***** */
+@media (hover: hover){
+  a:hover {
+    opacity: 0.75;
+  }
+
+  .contact-form input[type="submit"]:hover {
+    opacity: .75;
+  }
+
+  .menu a:hover{
+    background-color: inherit;
+    color: var(--white-color);
+  }
+
+  .github:hover{
+    color: var(--github-color);
+  }
+  
+  .linkedin:hover{
+    color: var(--linkedin-color);
+  }
+  
+  .twitter:hover{
+    color: var(--twitter-color);
+  }
+  
+  .whatsapp:hover{
+    color: var(--whatsapp-color);
+  }
+
   
 }
 
