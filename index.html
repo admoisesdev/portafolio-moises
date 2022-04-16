@@ -15,6 +15,7 @@
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <link rel="preload" href="style.css" as="style">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -80,7 +81,11 @@
      </article>
 
       <article>
-       <img class="gray-scale" src="assets/yo.jpeg" alt="Mi foto">
+        <picture>
+          <source loading="lazy" srcset="assets/yo.avif" type="image/avif">
+          <!-- <source loading="lazy" srcset="ass ets/yo.webp" type="image/webp"> -->
+          <img width="200" height="300" loading="lazy" class="gray-scale" src="assets/yo.jpeg" alt="Mi foto">
+        </picture>
       </article>
 
       
@@ -140,7 +145,7 @@
 
         <article class="skill">
           <h3>Html</h3>
-          <img src="assets/icon/html.svg" alt="HTML">
+          <img loading="lazy" src="assets/icon/html.svg" alt="HTML">
           <p>
             Maqueto sitios web con <i>HTML</i>
             de una manera semántica y estructurada siguiendo las 
@@ -150,7 +155,7 @@
   
         <article class="skill">
           <h3>Css</h3>
-          <img src="assets/icon/css.svg" alt="CSS">
+          <img loading="lazy" src="assets/icon/css.svg" alt="CSS">
           <p>
             Puedo maquetar sitios web estilosos usando características avanzadas de <i>CSS</i> como lo son <i>Flexbox, CSS Grid, Keyframes, Responsive Web Design</i>, etc. 
           </p>
@@ -158,7 +163,7 @@
   
         <article class="skill">
           <h3>Javascript</h3>
-          <img src="assets/icon/js.svg" alt="JS">
+          <img loading="lazy" src="assets/icon/js.svg" alt="JS">
           <p>
             Utilizo <i>Vanilla JS</i> para dar interactividad y dinamismo a los sitios web manipulando el <i>DOM</i>, usando eventos, consumiendo <i>APIs</i>, entra otras características.  
           </p>
@@ -166,7 +171,7 @@
   
         <article class="skill">
           <h3>Git</h3>
-          <img src="assets/icon/git.svg" alt="Git">
+          <img loading="lazy" src="assets/icon/git.svg" alt="Git">
           <p>
             Manejo el sistema de control de versiones <i>Git</i> para mantener respaldos y distintas versiones de mis repositorios. Tambien lo 
             uso para trabajar en equipo. 
@@ -175,7 +180,7 @@
   
         <article class="skill">
           <h3>Sass</h3>
-          <img src="assets/icon/sass.svg" alt="SASS">
+          <img loading="lazy" src="assets/icon/sass.svg" alt="SASS">
           <p>
             Aplico el <i>preprocesador SASS</i> para codificar <i>CSS</i> de una forma 
             más modularizada, emplear <i>nesting</i>, reutilización más eficiente, entre otras cosas.
@@ -184,7 +189,7 @@
   
         <article class="skill">
           <h3>Npm</h3>
-          <img src="assets/icon/npm.svg" alt="NPM">
+          <img loading="lazy" src="assets/icon/npm.svg" alt="NPM">
           <p>
             Uso el manejador de paquetes <i>NPM</i> de <i>NodeJS</i>, para así trabajar con dependencias, herramientas o librerías  en el desarrollo de mis sitios web.
           </p>
@@ -192,7 +197,7 @@
   
         <article class="skill">
           <h3>Webpack</h3>
-          <img src="assets/icon/webpack.svg" alt="Webpack">
+          <img loading="lazy" src="assets/icon/webpack.svg" alt="Webpack">
           <p>
             Utilizo el empaquetador de módulos <i>Webpack</i> para minificar código para producción, aligerar imágenes, y 
             usar <i>loaders</i> y <i>plugins</i> útiles.
@@ -201,7 +206,7 @@
   
         <article class="skill">
           <h3>Mysql</h3>
-          <img src="assets/icon/mysql.svg" alt="MySQL">
+          <img loading="lazy" src="assets/icon/mysql.svg" alt="MySQL">
           <p>
             Tengo conocimiento en <i>BD</i> con <i>MySQL</i> para realizar consultas, insertar datos, actualizar datos, eliminar datos y relacionar tablas. 
           </p>
@@ -214,7 +219,12 @@
         <h2 class="section-title">Mis proyectos</h2>
 
         <a href="#trabajo-1" class="portfolio-card">
-          <img src="assets/proyecto1.jpg" alt="Proyecto 1">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto1.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto1.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto1.jpg" alt="Proyecto 1">
+          </picture>
+
           <aside class="portfolio-card-info">
             <h3>Proyecto 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit interdum in eu placerat libero cursus facilisi et. Volutpat enim, accumsan enim, orci. Nec velit facilisis pulvinar posuere maecenas. Pellentesque ac vestibulum eros, orci quis.</p>
@@ -222,7 +232,12 @@
         </a>
 
         <a href="#trabajo-2" class="portfolio-card">
-          <img src="assets/proyecto2.jpg" alt="Proyecto 2">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto2.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto2.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto2.jpg" alt="Proyecto 2">
+          </picture>
+
           <aside class="portfolio-card-info">
             <h3>Proyecto 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit interdum in eu placerat libero cursus facilisi et. Volutpat enim, accumsan enim, orci. Nec velit facilisis pulvinar posuere maecenas. Pellentesque ac vestibulum eros, orci quis.</p>
@@ -230,7 +245,12 @@
         </a>
 
         <a href="#trabajo-3" class="portfolio-card">
-          <img src="assets/proyecto3.jpg" alt="Proyecto 3">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto3.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto3.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto3.jpg" alt="Proyecto 3">
+          </picture>
+
           <aside class="portfolio-card-info">
             <h3>Proyecto 3</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit interdum in eu placerat libero cursus facilisi et. Volutpat enim, accumsan enim, orci. Nec velit facilisis pulvinar posuere maecenas. Pellentesque ac vestibulum eros, orci quis.</p>
@@ -238,7 +258,12 @@
         </a>
 
         <a href="#trabajo-4" class="portfolio-card">
-          <img src="assets/proyecto4.jpg" alt="Proyecto 4">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto4.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto4.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto4.jpg" alt="Proyecto 4">
+          </picture>
+
           <aside class="portfolio-card-info">
             <h3>Proyecto 4</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit interdum in eu placerat libero cursus facilisi et. Volutpat enim, accumsan enim, orci. Nec velit facilisis pulvinar posuere maecenas. Pellentesque ac vestibulum eros, orci quis.</p>
@@ -246,7 +271,12 @@
         </a>
 
         <a href="#trabajo-5" class="portfolio-card">
-          <img src="assets/proyecto5.jpg" alt="Proyecto 5">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto5.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto5.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto5.jpg" alt="Proyecto 5">
+          </picture>
+
           <aside class="portfolio-card-info">
             <h3>Proyecto 5</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit interdum in eu placerat libero cursus facilisi et. Volutpat enim, accumsan enim, orci. Nec velit facilisis pulvinar posuere maecenas. Pellentesque ac vestibulum eros, orci quis.</p>
@@ -254,7 +284,12 @@
         </a>
         
         <a href="#trabajo-6" class="portfolio-card">
-          <img src="assets/proyecto6.jpg" alt="Proyecto 6">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto6.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto6.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto6.jpg" alt="Proyecto 6">
+          </picture>
+
           <aside class="portfolio-card-info">
             <h3>Proyecto 6</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit interdum in eu placerat libero cursus facilisi et. Volutpat enim, accumsan enim, orci. Nec velit facilisis pulvinar posuere maecenas. Pellentesque ac vestibulum eros, orci quis.</p>
@@ -275,7 +310,12 @@
         </a>
         
         <article class="portfolio-modal box-shadow-1">
-          <img src="assets/proyecto1.jpg" alt="Proyecto 1">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto1.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto1.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto1.jpg" alt="Proyecto 1">
+          </picture>
+
           <div class="portfolio-info">
             <h3>proyecto 1</h3>
             <p>
@@ -309,7 +349,11 @@
         </a>
 
         <article class="portfolio-modal box-shadow-1">
-          <img src="assets/proyecto2.jpg" alt="Proyecto 2">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto2.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto2.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto2.jpg" alt="Proyecto 2">
+          </picture>
 
           <div class="portfolio-info">
             <h3>proyecto 2</h3>
@@ -344,7 +388,11 @@
         </a>
 
         <article class="portfolio-modal box-shadow-1">
-          <img src="assets/proyecto3.jpg" alt="Proyecto 3">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto3.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto3.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto3.jpg" alt="Proyecto 3">
+          </picture>
 
           <div class="portfolio-info">
             <h3>proyecto 3</h3>
@@ -379,7 +427,11 @@
         </a>
 
         <article class="portfolio-modal box-shadow-1">
-          <img src="assets/proyecto4.jpg" alt="Proyecto 4">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto4.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto4.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto4.jpg" alt="Proyecto 4">
+          </picture>
 
           <div class="portfolio-info">
             <h3>proyecto 4</h3>
@@ -414,7 +466,11 @@
         </a>
 
         <article class="portfolio-modal box-shadow-1">
-          <img src="assets/proyecto5.jpg" alt="Proyecto 5">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto5.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto5.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto5.jpg" alt="Proyecto 5">
+          </picture>
 
           <div class="portfolio-info">
             <h3>proyecto 5</h3>
@@ -449,7 +505,11 @@
         </a>
 
         <article class="portfolio-modal box-shadow-1">
-          <img src="assets/proyecto6.jpg" alt="Proyecto 6">
+          <picture>
+            <source loading="lazy" srcset="assets/proyecto6.avif" type="image/avif">
+            <!-- <source loading="lazy" srcset="assets/proyecto6.webp" type="image/webp"> -->
+            <img width="200" height="300" loading="lazy" src="assets/proyecto6.jpg" alt="Proyecto 6">
+          </picture>
 
           <div class="portfolio-info">
             <h3>proyecto 6</h3>
@@ -481,13 +541,13 @@
       <article class="contact-cards text-center">
         <aside class="contact-card box-shadow-1">
           <h5>Ubicación</h5>
-          <img src="assets/icon/ubication.svg" alt="Ubicación">
+          <img loading="lazy" src="assets/icon/ubication.svg" alt="Ubicación">
           <address><i>Talcahuano</i>, Chile</address>
         </aside>
 
         <aside class="contact-card box-shadow-1">
           <h5>Teléfono</h5>
-          <img src="assets/icon/phone.svg" alt="Teléfono">
+          <img loading="lazy" src="assets/icon/phone.svg" alt="Teléfono">
           <address>
             <a href="tel:941225445">+569 41225445</a>
           </address>
@@ -495,7 +555,7 @@
 
         <aside class="contact-card box-shadow-1">
           <h5>Email</h5>
-          <img src="assets/icon/email.svg" alt="Email">
+          <img loading="lazy" src="assets/icon/email.svg" alt="Email">
           <address>
             <a href="mailto:moi.prado20@gmail.com">moi.prado20@gmail.com</a>
           </address>
@@ -503,7 +563,7 @@
 
         <aside class="contact-card box-shadow-1">
           <h5>Redes Sociales</h5>
-          <img src="assets/icon/social-media.svg" alt="Redes Sociales">
+          <img loading="lazy" src="assets/icon/social-media.svg" alt="Redes Sociales">
           <address>
             <a class="whatsapp" style="--whatsapp-color: #25d366;" href="https://api.whatsapp.com/send?phone=941225445&text=Hola" target="_blank" rel="noopener">
               <i class="fab fa-whatsapp"></i>
@@ -533,14 +593,14 @@
         <textarea name="comments" cols="50" rows="10" placeholder="Envía tus comentarios *" required></textarea>
 
         <div class="loader none text-center">
-          <img src="assets/icon/loader.svg" alt="loader">
+          <img loading="lazy" src="assets/icon/loader.svg" alt="loader">
         </div>
 
         <input class="btn" type="submit" value="Enviar Mensaje">
       </form>
 
       <!-- Modal al enviar formulario -->
-      <article id="gracias" class="modal none">
+      <article id="gracias" class="modal">
         <div class="modal-content">
           <article class="contact-form-response">
             <h3>
@@ -549,7 +609,7 @@
               Por tus comentarios
             </h3>
 
-            <img src="assets/icon/check.svg">
+            <img loading="lazy" src="assets/icon/check.svg">
           </article>
         </div>
       </article>
@@ -562,6 +622,9 @@
       Sitio diseñado por <span>ADMoises</span>
     </p>
   </footer>
+
+  <!-- Importando modernizr para el soporte de webp -->
+  <script src="js/modernizr.js"></script>
 </body>
 
 </html>
