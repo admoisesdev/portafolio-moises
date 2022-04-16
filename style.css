@@ -554,6 +554,17 @@ progress::-moz-progress-bar{
 }
 
 
+/* *** footer*** */
+.footer{
+  background-color: var(--third-color);
+  color: var(--white-color);
+  padding: 1rem;
+}
+
+.footer span{
+  color: var(--link-color);
+}
+
 /* ***** Version Tablet ***** */
 @media screen and (min-width: 768px) {
   .contact-cards{
