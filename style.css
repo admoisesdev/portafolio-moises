@@ -147,12 +147,31 @@ p {
 }
 
 .contact-form-response{
-  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--white-color);
+  padding: 2rem;
+}
+
+.contact-form-response svg{
+  width: 3rem;
+  height: 3rem;
+}
+
+.loader{
+  grid-column: span 2;
 }
 
 .loader img{
   width: 4rem;
   height: 4rem;
+}
+
+#gracias{
+  /* opacity: 1; */
+  /* pointer-events: auto; */
 }
 
 @media screen and (min-width: 1024px) {
@@ -496,7 +515,7 @@ progress::-moz-progress-bar{
   text-transform: uppercase;
 }
 
-.contact-card img{
+.contact-card svg{
   margin: 1rem auto;
 }
 
@@ -621,7 +640,7 @@ progress::-moz-progress-bar{
   text-transform: uppercase;
 }
 
-.skill img{
+.skill svg{
   margin: 1rem auto;
 }
 
