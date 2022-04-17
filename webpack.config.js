@@ -1,7 +1,14 @@
+//* Plugins 
 const HtmlWebpackPlugin = require("html-webpack-plugin"),
       MiniCssExtractPlugin = require("mini-css-extract-plugin");
+//* Ruta absoluta para cambiar punto de salida
+const path = require('path');
 
 module.exports = {
+  output: {
+    // entry: './src/index.js', //* No se especifica punto de entrada por defecto es ./src/index.js
+    path: path.resolve(__dirname,'build') //* Cambiando a 'build' el nombre de carpeta como punto de salida 
+  },
   module: {
     rules: [
       {
@@ -35,7 +42,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html", //* Punto de entrada
+      template: "./index.html", //* Punto de entrada
       filename: "./index.html", //* Nombre en el punto de salida
     }),
     new MiniCssExtractPlugin(),
