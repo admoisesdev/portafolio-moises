@@ -1,13 +1,15 @@
 //* Plugins 
 const HtmlWebpackPlugin = require("html-webpack-plugin"),
-      MiniCssExtractPlugin = require("mini-css-extract-plugin");
+      MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+      CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 //* Ruta absoluta para cambiar punto de salida
 const path = require('path');
 
 module.exports = {
   output: {
     // entry: './src/index.js', //* No se especifica punto de entrada por defecto es ./src/index.js
-    path: path.resolve(__dirname,'build') //* Cambiando a 'build' el nombre de carpeta como punto de salida 
+    path: path.resolve(__dirname,'build'), //* Cambiando a 'build' el nombre de carpeta como punto de salida 
+    assetModuleFilename: "assets/[name][ext]"
   },
   module: {
     rules: [
@@ -31,20 +33,36 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+        ],
       },
       {
-        test: /\.(jpe?g|png|gif|svg|webp|avif)$/i, //* Archivos de imagenes(jpeg,jpg,png,gif,svg,webp)
-        //?'file-loader' permite importar imagenes en JS para ocuparlas y 'image-webpack-loader' las hace ligeras
-        use: ["file-loader?name=assets/[name].[ext]", "image-webpack-loader"],
+        test: /\.(jpe?g|png|gif|svg|webp)$/i, 
+        type: "asset/resource", //* Permitiendo mostrar recursos de url() en CSS
+        use: {
+          loader: "image-webpack-loader", //* Aligerando imagenes
+        }
       },
+    ],
+  },
+  optimization: {
+    minimizer: [
+      new CssMinimizerPlugin(), //* Minifica CSS
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html", //* Punto de entrada
+      template: "./src/index.html", //* Punto de entrada
       filename: "./index.html", //* Nombre en el punto de salida
     }),
     new MiniCssExtractPlugin(),
   ],
 };
+
+
+
+
+
+

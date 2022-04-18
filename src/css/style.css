@@ -186,7 +186,7 @@ p {
 
 /* *** Hero Image **** */
 .hero-image{
-  /* background-image: var(--hero-image); */
+  background-image: url(../assets/hero-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -228,6 +228,7 @@ p {
   width: 100%;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 
 .menu a{
@@ -239,7 +240,7 @@ p {
   font-weight: 600;
 }
 
-.menu a:active{
+.menu a:hover{
   background-color: var(--second-color);
   color: var(--black-color);
 }
@@ -248,6 +249,7 @@ p {
   height: 2.125rem;
   background-color: transparent;
   border: thin solid var(--second-color);
+  cursor: pointer;
 }
 
 .menu-btn path{
@@ -273,6 +275,11 @@ p {
   .menu a{
     padding: 0;
     padding-right: 1rem;
+  }
+
+  .menu a:hover{
+    background-color: transparent;
+    color: var(--white-color);
   }
 
   .menu a:last-child{
@@ -680,12 +687,11 @@ progress::-moz-progress-bar{
     height: 25rem;
   }
 
-  .portfolio-modal picture{
-    max-width: 50rem;
+  .portfolio-modal img{
+    max-width: 25rem;
   }
 
   
-
   .skills .container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -748,10 +754,6 @@ progress::-moz-progress-bar{
     opacity: .75;
   }
 
-  .menu a:hover{
-    background-color: inherit;
-    color: var(--white-color);
-  }
 
   .github:hover{
     color: var(--github-color);
