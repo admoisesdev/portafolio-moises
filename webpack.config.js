@@ -54,7 +54,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html", //* Punto de entrada
+      template: "./index.html", //* Punto de entrada
       filename: "./index.html", //* Nombre en el punto de salida
     }),
     new MiniCssExtractPlugin(),
