@@ -11,10 +11,10 @@
 /*? ********** Custom Properties ********** */
 
 :root {
-  --first-color: #000080;
-  --first-alpha-color: #00008075;
-  --second-color: #6565FF;
-  --second-alpha-color: #6565FF75;
+  --first-color: #0d6efd;
+  --first-alpha-color: #0d6efd75;
+  --second-color: #f8f9fa;
+  --second-alpha-color: #f8f9fa75;
   --third-color: #2E4053;
   --third-alpha-color: #2E405375;
   --white-color: #FFFFFF;
@@ -242,7 +242,7 @@ p {
 
 .menu a:hover{
   background-color: var(--second-color);
-  color: var(--black-color);
+  color: var(--text-color);
 }
 
 .menu-btn{
@@ -274,16 +274,19 @@ p {
 
   .menu a{
     padding: 0;
-    padding-right: 1rem;
+    margin-right: 2rem;
+    transition: opacity 1s ease;
   }
 
   .menu a:hover{
     background-color: transparent;
     color: var(--white-color);
+    border-bottom: medium solid var(--first-color);
+    border-radius: .2rem;
   }
 
   .menu a:last-child{
-    padding-right: 0;
+    margin-right: 0;
   }
 
   .menu-btn{
@@ -474,10 +477,31 @@ progress::-moz-progress-bar{
   align-items: center;
 }
 
+.logo:hover{
+  animation: pulse 1.5s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 .logo a{
   color: var(--second-color);
-  font-weight: 600;
+  font-weight: 300;
   font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  outline: 0;
 }
 
 
@@ -722,8 +746,14 @@ progress::-moz-progress-bar{
 
 
   .header{
-    position: sticky;
+    position: absolute;
     top: 0;
+    background-color: transparent;
+    height: 5rem;
+  }
+
+  .menu{
+    background-color: inherit;
   }
 
   .portfolio > .container{
