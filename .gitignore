@@ -1,7 +1,4 @@
 /node_modules
 .vscode/*
-/src
-.babelrc/*
-package-lock.json
-package.json
+
 
