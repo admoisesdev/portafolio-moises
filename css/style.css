@@ -336,7 +336,7 @@ p {
 }
 
 .modal-close path{
-  fill: var(--second-color);
+  fill: var(--first-color);
 }
 
 .modal[id|="trabajo"]:target {
@@ -607,8 +607,15 @@ progress::-moz-progress-bar{
 .portfolio-card img,
 .portfolio-modal img{
   width: 100%;
-  height: 100%;
   object-fit: cover;
+}
+
+.portfolio-card img{
+  height: 100%;
+}
+
+.portfolio-modal img{
+  max-height: 100%;
 }
 
 .portfolio-card-info{
@@ -639,7 +646,8 @@ progress::-moz-progress-bar{
 }
 
 .portfolio-details b{
-  color: var(--first-color);
+  color: var(--third
+  -color);
   font-weight: 900;
 }
 
@@ -651,7 +659,7 @@ progress::-moz-progress-bar{
   color: var(--title-color);
   margin: 2rem 0 1rem;
   padding-bottom: .3rem;
-  border-bottom: medium solid var(--second-color);
+  border-bottom: medium solid var(--first-color);
   text-transform: uppercase;  
 }
 
@@ -721,12 +729,12 @@ progress::-moz-progress-bar{
   .portfolio-modal{
     flex-direction: row;
     column-gap: 2rem;
-    max-width: 50rem;
-    height: 25rem;
+    max-width: 55rem;
+    max-height: 25rem;
   }
 
   .portfolio-modal img{
-    max-width: 25rem;
+    width: 23rem;
   }
 
   
