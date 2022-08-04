@@ -436,6 +436,7 @@ progress::-moz-progress-bar{
   width: 20rem;
   text-align: center;
   color: var(--title-color);
+  border-radius: 0 0 1rem;
 }
 
 .text-first-color {
