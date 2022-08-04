@@ -222,7 +222,12 @@ p {
 
 .hero-image-title{
   color: var(--hero-text-color);
-  font-size: 7vw;
+  font-size: 5vw;
+}
+
+.typed > .title{
+  color: var(--link-color);
+  font-weight: 300;
 }
 
 
