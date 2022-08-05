@@ -13,8 +13,8 @@
 :root {
   --first-color: #0d6efd;
   --first-alpha-color: #0d6efd75;
-  --second-color: #f8f9fa;
-  --second-alpha-color: #f8f9fa75;
+  --second-color: #154360;
+  --second-alpha-color: #15436075;
   --third-color: #2E4053;
   --third-alpha-color: #2E405375;
   --white-color: #FFFFFF;
@@ -25,8 +25,10 @@
   --link-color: #509EE3;
   --title-color: #333333;
   --text-color: #222222;
-  --white-alpha-color: #fff5;
+  --white-alpha-color: #fff4;
   --black-alpha-color: #0007;
+  --text-shadow-1: #e0e0e0 1px 1px 0;
+  --text-shadow-2: #000 0.1em 0.1em 0.2em;
   --font: 'Raleway', sans-serif;
   --max-width: 1200px;
   --header-height: 4rem;
@@ -227,7 +229,13 @@ p {
 
 .typed > .title{
   color: var(--link-color);
-  font-weight: 300;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .typed > .title{
+    font-weight: 300;
+  }
 }
 
 
@@ -248,7 +256,7 @@ p {
 }
 
 .menu a{
-  color: var(--second-color);
+  color: var(--white-color);
   padding: 1rem;
   text-decoration: none;
   text-align: center;
@@ -257,14 +265,14 @@ p {
 }
 
 .menu a:hover{
-  background-color: var(--second-color);
+  background-color: var(--white-color);
   color: var(--text-color);
 }
 
 .menu-btn{
   height: 2.125rem;
   background-color: transparent;
-  border: thin solid var(--second-color);
+  border: thin solid var(--white-color);
   cursor: pointer;
   outline: 0;
 }
@@ -272,7 +280,7 @@ p {
 .menu-btn path{
   width: 20px;
   height: 16px;
-  fill: var(--second-color);
+  fill: var(--white-color);
 }
 
 .menu.is-active {
@@ -396,6 +404,10 @@ progress::-moz-progress-bar{
   box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, 0.25);
 }
 
+.box-shadow-2 {
+  box-shadow: -.25rem -.25rem .5rem rgba(0, 0, 0, .5);
+}
+
 .btn {
   border-radius: .5rem;
   border: 0;
@@ -497,13 +509,10 @@ progress::-moz-progress-bar{
   height: 100%;
 }
 
-.logo:hover{
-  animation: pulse 1.5s linear infinite;
-}
 
 
 .logo a{
-  color: var(--second-color);
+  color: var(--white-color);
   font-weight: 300;
   font-size: 2rem;
   text-transform: uppercase;
@@ -637,10 +646,18 @@ progress::-moz-progress-bar{
   transition: all .5s ease-in-out;
 }
 
-
 .portfolio-card-info h3,
 .portfolio-card-info p{
   color: var(--white-color);
+}
+
+.portfolio-card-info h3{
+  text-shadow: var(--text-shadow-1);
+}
+
+.portfolio-card-info p {
+  text-shadow: var(--text-shadow-2);
+
 }
 
 
@@ -690,17 +707,57 @@ progress::-moz-progress-bar{
 }
 
 .skills > .container{
-  row-gap: 2rem;
-  column-gap: 3rem;
+  gap: 1rem;
+  margin: 1rem;
 }
+
+
+.skill{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--second-color);
+  border-radius: .7rem;
+  transition: all 0.3s ease;
+}
+
+.skill:last-child{
+  margin-bottom: 0;
+}
+
+
 
 .skill h3{
   text-transform: uppercase;
+  text-shadow: var(--text-shadow-2);
 }
 
-.skill svg{
-  margin: 1rem auto;
+.skill h3,
+.skill p{
+  color: var(--white-color);
 }
+
+.skill > .icon{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+}
+
+.skill>.icon:last-child{
+  height: 6.25rem;
+  width: 6.25rem;
+
+}
+
 
 
 /* *** footer*** */
@@ -749,6 +806,10 @@ progress::-moz-progress-bar{
     grid-template-columns: repeat(2,1fr);
   }
 
+  .skill{
+    margin-bottom: 0;
+  }
+
   .skills .section-title,
   .portfolio .section-title{
     grid-column: span 2;
@@ -792,14 +853,33 @@ progress::-moz-progress-bar{
     grid-column: span 3;
   }
 
-  .skills .container{
+  .skills > .container{
     grid-template-columns: repeat(4,1fr);
+    margin: 0;
+    margin-left: 6.25rem;
+    column-gap: 0;
   }
 
   .skills .section-title{
     grid-column: span 4;
   }
+  
+  .skill{
+    width: 25vw;
+  }
 
+  
+  .skill:hover {
+    cursor: pointer;
+    transform: rotate(3deg) translateY(-15px);
+    margin-right: 5rem;
+  }
+  
+  .skill[class*="card"] {
+    margin-left: -6.25rem;
+  }
+
+  
   .footer{
     margin-bottom: 0;
   }
@@ -824,6 +904,11 @@ progress::-moz-progress-bar{
   .linkedin:hover{
     color: var(--linkedin-color);
   }
+
+  .logo:hover{
+    animation: pulse 1.5s linear infinite;
+  }
+
   
   .twitter:hover{
     color: var(--twitter-color);
