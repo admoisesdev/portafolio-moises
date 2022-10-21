@@ -199,6 +199,8 @@ p {
 
 /* *** Hero Image **** */
 .hero-image{
+  --hero-attachment: fixed;
+  
   background-image: url(../img/hero-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -207,6 +209,8 @@ p {
 }
 
 .hero-image-opacity{
+  --hero-opacity-color: var(--black-alpha-color);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,6 +227,8 @@ p {
 }
 
 .hero-image-title{
+  --hero-text-color: var(--white-color);
+
   color: var(--hero-text-color);
   font-size: 5vw;
 }
@@ -586,18 +592,22 @@ progress::-moz-progress-bar{
 }
 
 .github:active{
+  --github-color: #171515
   color: var(--github-color);
 }
 
 .linkedin:active{
+  --linkedin-color: #0e76a8;
   color: var(--linkedin-color);
 }
 
 .twitter:active{
+  --twitter-color: #00acee;
   color: var(--twitter-color);
 }
 
 .whatsapp:active{
+  --whatsapp-color: #25d366;
   color: var(--whatsapp-color);
 }
 
