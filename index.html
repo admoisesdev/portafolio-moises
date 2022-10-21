@@ -19,10 +19,10 @@
     content="https://raw.githubusercontent.com/JKmoises/portafolio-moises/gh-pages/build/img/hero-image.jpg" />
   <meta property="og:url" name="twitter:url" content="https://jkmoises.github.io/portafolio-moises" />
 
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet"
-  as="font" crossorigin="crossorigin">
-  <link rel="preload" href="build/css/app.css" rel="stylesheet" as="styles"/>
-  <link rel="preload" href="build/js/bundle.min.js" as="script">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" 
+  crossorigin="crossorigin"  as="font">
+  <link rel="preload" href="build/css/app.css" as="style" />
+  <link rel="preload" href="build/js/bundle.min.js" as="script" />
 
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="build/css/app.css" rel="stylesheet" />
@@ -117,7 +117,10 @@
         </div>
       </article>
       <article class="foto">
-        <img class="gray-scale" src="build/img/yo.jpg" alt="Mi foto" loading="lazy" />
+        <picture>
+          <source srcset="build/img/yo.webp" type="image/webp" loading="lazy">
+          <img class="gray-scale" src="build/img/yo.jpg" alt="Mi foto" loading="lazy" />
+        </picture>
       </article>
       <article>
         <h2 class="text-center">Conocimientos</h2>
@@ -282,8 +285,10 @@
       <div class="container">
         <h2 class="section-title">Mis proyectos</h2>
         <a href="#trabajo-1" class="portfolio-card">
-          <img loading="lazy"
-            src="build/img/project1.webp" alt="Proyecto 1" />
+          <picture>
+            <source srcset="build/img/project1.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project1.webp" alt="Proyecto 1" />
+          </picture>
 
           <aside class="portfolio-card-info">
             <h3>App de Pomodoro</h3>
@@ -296,8 +301,10 @@
         </a>
 
         <a href="#trabajo-2" class="portfolio-card">
-          <img loading="lazy"
-            src="build/img/project2.png" alt="Proyecto 2" />
+          <picture>
+            <source srcset="build/img/project2.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project2.png" alt="Proyecto 2" />
+          </picture>
 
           <aside class="portfolio-card-info">
             <h3>Contador de Días</h3>
@@ -310,8 +317,10 @@
         </a>
 
         <a href="#trabajo-4" class="portfolio-card">
-          <img loading="lazy"
-          src="build/img/project4.jpg" alt="Proyecto 4" />
+          <pciture>
+            <source srcset="build/img/project4.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project4.jpg" alt="Proyecto 4" />
+          </pciture>
 
           <aside class="portfolio-card-info">
             <h3>Teclado Virtual</h3>
@@ -323,8 +332,10 @@
         </a>
         
         <a href="#trabajo-5" class="portfolio-card">
-          <img loading="lazy"
-          src="build/img/project5.jpg" alt="Proyecto 5" />
+          <picture>
+            <source srcset="build/img/project5.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project5.jpg" alt="Proyecto 5" />
+          </picture>
           
           <aside class="portfolio-card-info">
             <h3>Carrito de compras</h3>
@@ -337,8 +348,10 @@
         </a>
         
         <a href="#trabajo-6" class="portfolio-card">
-          <img loading="lazy"
-          src="build/img/project6.jpg" alt="Proyecto 6" />
+          <picture>
+            <source srcset="build/img/project6.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project6.jpg" alt="Proyecto 6" />
+          </picture>
             
           <aside class="portfolio-card-info">
             <h3>Proyecto 6</h3>
@@ -352,7 +365,10 @@
         </a>
         
         <a href="#trabajo-3" class="portfolio-card">
-          <img loading="lazy" src="build/img/project3.jpg" alt="Proyecto 3" />
+          <picture>
+            <source srcset="build/img/project3.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project3.jpg" alt="Proyecto 3" />
+          </picture>
 
           <aside class="portfolio-card-info">
             <h3>Sitio web Zoo</h3>
@@ -378,7 +394,11 @@
           </svg>
         </a>
         <article class="portfolio-modal box-shadow-1">
-          <img loading="lazy" src="build/img/project1.webp" alt="Proyecto 1" />
+          <picture>
+            <source srcset="build/img/project1.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project1.webp" alt="Proyecto 1" />
+          </picture>
+
           <div class="portfolio-info">
             <h3>App de Pomodoro</h3>
             <p>
@@ -414,7 +434,11 @@
           </svg>
         </a>
         <article class="portfolio-modal box-shadow-1">
-          <img loading="lazy" src="build/img/project2.png" alt="Proyecto 2" />
+          <picture>
+            <source srcset="build/img/project2.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project2.png" alt="Proyecto 2" />
+          </picture>
+
           <div class="portfolio-info">
             <h3>Contador días de evento</h3>
             <p>
@@ -448,7 +472,11 @@
               fill="#000080" />
           </svg></a>
         <article class="portfolio-modal box-shadow-1">
-          <img loading="lazy" src="build/img/project3.jpg" alt="Proyecto 3" />
+          <picture>
+            <source srcset="build/img/project3.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project3.jpg" alt="Proyecto 3" />
+          </picture>
+
           <div class="portfolio-info">
             <h3>Sitio Zoo tipo blog</h3>
             <p>
@@ -485,7 +513,11 @@
               fill="#000080" />
           </svg></a>
         <article class="portfolio-modal box-shadow-1">
-          <img loading="lazy" src="build/img/project4.jpg" alt="Proyecto 4" />
+          <picture>
+            <source srcset="build/img/project4.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project4.jpg" alt="Proyecto 4" />
+          </picture>
+
           <div class="portfolio-info">
             <h3>Teclado Virtual</h3>
             <p>
@@ -521,7 +553,11 @@
           </svg>
         </a>
         <article class="portfolio-modal box-shadow-1">
-          <img loading="lazy" src="build/img/project5.jpg" alt="Proyecto 5" />
+          <picture>
+            <source srcset="build/img/project5.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project5.jpg" alt="Proyecto 5" />
+          </picture>
+
           <div class="portfolio-info">
             <h3>Carrito de compras</h3>
             <p>
@@ -557,7 +593,11 @@
           </svg>
         </a>
         <article class="portfolio-modal box-shadow-1">
-          <img loading="lazy" src="build/img/project6.jpg" alt="Proyecto 6" />
+          <picture>
+            <source srcset="build/img/project6.webp" type="image/webp" loading="lazy">
+            <img loading="lazy" src="build/img/project6.jpg" alt="Proyecto 6" />
+          </picture>
+
           <div class="portfolio-info">
             <h3>proyecto 6</h3>
             <p>
