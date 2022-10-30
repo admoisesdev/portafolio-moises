@@ -686,14 +686,14 @@ progress::-moz-progress-bar{
 }
 
 .portfolio-details b{
-  color: var(--third
-  -color);
+  color: var(--third-color);
   font-weight: 900;
 }
 
 .portfolio-details > small{
   font-size: 1rem;
 }
+
 
 .portfolio-info h3{
   color: var(--title-color);
@@ -806,6 +806,10 @@ progress::-moz-progress-bar{
     grid-template-columns: repeat(2,1fr);
   }
 
+  .portfolio-info{
+    flex: 1.5;
+  }
+
   .portfolio-modal{
     flex-direction: row;
     column-gap: 2rem;
@@ -813,8 +817,11 @@ progress::-moz-progress-bar{
     max-height: 25rem;
   }
 
+  .portfolio-modal picture{
+    flex: 1;
+  }
   .portfolio-modal img{
-    width: 23rem;
+    height: 100%;
   }
 
   
