@@ -570,6 +570,14 @@ progress::-moz-progress-bar{
   object-fit: cover;
 }
 
+.about-me p{
+  text-align: justify;
+}
+
+.about-me > p:first-of-type{
+  margin-bottom: 1rem;
+}
+
 /* *** contact *** */
 .contact{
   padding-top: 0;
