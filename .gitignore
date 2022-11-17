@@ -1,4 +1,5 @@
 .vscode
+.hintrc
 node_modules
 src
 gulpfile.js
