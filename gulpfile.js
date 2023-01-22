@@ -1,5 +1,5 @@
 const { src, dest, watch, parallel } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require("gulp-sass")(require("sass"));
 const plumber = require('gulp-plumber');
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss')
