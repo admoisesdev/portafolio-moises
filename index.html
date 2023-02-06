@@ -21,6 +21,7 @@
 
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" 
   crossorigin="crossorigin"  as="font">
+  <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
   <link rel="preload" href="build/css/app.css" as="style" />
   <link rel="preload" href="build/js/bundle.min.js" as="script" />
 
@@ -28,6 +29,7 @@
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="build/css/app.css" rel="stylesheet" />
 </head>
 
@@ -60,37 +62,12 @@
   <div id="hero-image" class="hero-image">
     <aside class="hero-image-opacity">
       <div class="hero-image-content text-lg-center">
-        <h1 class="hero-image-title">
-          <span class="typed"></span>
+        <h1 data-aos="zoom-in-up" data-aos-duration="1000" class="hero-image-title">
+          Programador Web <br>
+          Frontend y Backend
         </h1>
-        <div class="titles" id="titles">
-          <p>
-            Bienvenid@ !!! <br>
-            ¿Buscas a un <i class="title">Frontend </i>? <br>
-            💻 Explora mi perfil si es así 💻
-          </p>
-          <p>
-            Bienvenid@ !!! <br>
-            💻 Pues aquí encontrarás... <br>
-            A un <i class="title">Autodidacta</i>
-          </p>
-          <p>
-            Bienvenid@ !!! <br>
-            💻 Pues aquí encontrarás... <br>
-            Portafolio <i class="title">Frontend</i>
-          </p>
-          <p>
-            Bienvenid@ !!! <br>
-            💻 Pues aquí encontrarás... <br>
-            Sobre <i class="title">Backend</i>
-          </p>
-          <p>
-            Bienvenid@ !!! <br>
-            💻 Pues aquí encontrarás... <br>
-            Sobre <i class="title">Javascript, Frameworks</i> y más!
-          </p>
-        </div>
-        <a class="btn" href="#contact">contáctame</a>
+          
+        <a data-aos="zoom-out-up" data-aos-duration="1300" class="btn" href="#contact">contáctame</a>
       </div>
     </aside>
   </div>
@@ -98,22 +75,22 @@
   <main>
     <section id="about" class="container section about">
       <article class="about-me">
-        <aside>
+        <aside data-aos="fade-up">
           <h4 class="text-center">Moisés Prado Fernández</h4>
           <h6 class="text-center">programador & maquetador web</h6>
         </aside>
-        <p>
+        <p data-aos="fade-up">
           Actualmente llevo 3 meses de experiencia trabajando en desarrollo y mantenimiento de sistema de facturación y ERP
           mejorando funcionalidades existentes, ya sea de maquetación web o lógica de negocio según las órdenes de trabajo
           solicitadas por el cliente.
-        </p>
+        </p data-aos="fade-up">
         <p>
           En mis tiempos libres me gusta aprender sobre temas de tecnología, sobre todo programar y aprender algo nuevo acorde a
           mi ruta de aprendizaje como la persona autodidacta que me considero, de esta manera creando pequeños proyectos para
           practicar.
         </p>
 
-        <div class="text-lg-right text-center">
+        <div data-aos="fade-right" data-aos-duration="1000" class="text-lg-right text-center">
           <a class="btn" href="build/img/CV-MoisesPrado.pdf" target="_blank" rel="noopener">Descarga mi CV</a>
         </div>
       </article>
@@ -126,44 +103,44 @@
       </article>
       
       <article>
-        <h2 class="text-center">Conocimientos</h2>
-        <div class="progress-bar">
+        <h2 data-aos="fade-up" class="text-center">Conocimientos</h2>
+        <div data-aos="fade-up" class="progress-bar">
           <p>
             <b><i>Html</i></b> <b>Alto</b>
           </p>
           <progress value="98" min="0" max="100"></progress>
         </div>
-        <div class="progress-bar">
+        <div data-aos="fade-up" class="progress-bar">
           <p>
             <b><i>Css</i></b> <b>Alto</b>
           </p>
           <progress value="98" min="0" max="100"></progress>
         </div>
-        <div class="progress-bar">
+        <div data-aos="fade-up" class="progress-bar">
           <p>
             <b><i>Javascript</i></b> <b>Alto</b>
           </p>
           <progress value="98" min="0" max="100"></progress>
         </div>
-        <div class="progress-bar">
+        <div data-aos="fade-up" class="progress-bar">
           <p>
             <b><i>Git</i></b> <b>Alto</b>
           </p>
           <progress value="80" min="0" max="100"></progress>
         </div>
-        <div class="progress-bar">
+        <div data-aos="fade-up" class="progress-bar">
           <p>
             <b><i>React</i></b> <b>Alto</b>
           </p>
           <progress value="90" min="0" max="100"></progress>
         </div>
-        <div class="progress-bar">
+        <div data-aos="fade-up" class="progress-bar">
           <p>
             <b><i>Mysql</i></b> <b>Medio</b>
           </p>
           <progress value="50" min="0" max="100"></progress>
         </div>
-        <div class="progress-bar">
+        <div data-aos="fade-up" class="progress-bar">
           <p>
             <b><i>PHP</i></b> <b>Medio Alto</b>
           </p>
@@ -174,7 +151,7 @@
 
 
     <section id="skills" class="skills">
-      <h2 class="section-title">Tecnologías</h2>
+      <h2 data-aos="flip-down" data-aos-duration="500" class="section-title">Tecnologías</h2>
 
       <div class="container text-center">
 
@@ -298,7 +275,7 @@
 
     <section id="portfolio" class="section portfolio">
       <div class="container">
-        <h2 class="section-title">Mis proyectos</h2>
+        <h2 data-aos="flip-down" data-aos-duration="500" class="section-title">Mis proyectos</h2>
 
         <a href="#trabajo-3" class="portfolio-card">
           <picture>
@@ -645,20 +622,21 @@
     </article>
 
     <section id="contact" class="container section contact">
-      <h2 class="section-title">¿Me contactas?</h2>
+      <h2 data-aos="flip-down" data-aos-duration="500" class="section-title">¿Me contactas?</h2>
       <article class="contact-cards text-center">
-        <aside class="contact-card box-shadow-1">
+        <aside data-aos="fade-up-left" data-aos-duration="1000" class="contact-card box-shadow-1">
           <h5>Ubicación</h5>
           <img src="build/img/ubication.svg" alt="Icono ubicación" loading="lazy">
           <address><i>Talcahuano</i>, Chile</address>
         </aside>
-        <aside class="contact-card box-shadow-1">
+        
+        <aside data-aos="fade-down" data-aos-duration="1000" class="contact-card box-shadow-1">
           <h5>Teléfono</h5>
           <img src="build/img/phone.svg" alt="Icono teléfono" loading="lazy">
           <address><a href="tel:941225445">+569 41225445</a></address>
         </aside>
 
-        <aside class="contact-card box-shadow-1">
+        <aside data-aos="fade-down" data-aos-duration="1000" class="contact-card box-shadow-1">
           <h5>Email</h5>
           <img src="build/img/email.svg" alt="Icono email" loading="lazy">
           <address>
@@ -666,7 +644,7 @@
           </address>
         </aside>
 
-        <aside class="contact-card box-shadow-1">
+        <aside data-aos="fade-up-right" data-aos-duration="1000" class="contact-card box-shadow-1">
           <h5>Redes Sociales</h5>
           <img src="build/img/social-media.svg" alt="Icono redes sociales" loading="lazy">
           <address>
@@ -722,7 +700,10 @@
     <p>Sitio diseñado por <span>ADMoises</span> &#169 - Programador y maquetador web - <span id="current-year"></span></p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script type="module" src="build/js/bundle.min.js"></script>
 </body>
 
