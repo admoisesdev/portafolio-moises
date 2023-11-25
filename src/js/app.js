@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  typedEffect();
   loadCurrentDate()
   hamburguerMenu();
   contactForm();
