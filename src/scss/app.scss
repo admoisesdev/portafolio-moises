@@ -657,6 +657,7 @@ progress::-moz-progress-bar{
 .portfolio-modal img{
   width: 100%;
   object-fit: cover;
+  object-position: right;
 }
 
 .portfolio-card img{
@@ -836,6 +837,7 @@ progress::-moz-progress-bar{
     max-height: 25rem;
     height: auto;
     padding: 1rem;
+    overflow-y: hidden;
   }
 
   .portfolio-modal picture{
