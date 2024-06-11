@@ -1,8 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+  removeScrollInModal();
   loadCurrentDate()
   hamburguerMenu();
   contactForm();
 });
+
+function removeScrollInModal(){
+  window.addEventListener('hashchange', function () {
+    if (window.location.hash.includes('#trabajo')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  });
+}
 
 function hamburguerMenu() {
   const $menuBtn = document.querySelector('.menu-btn');

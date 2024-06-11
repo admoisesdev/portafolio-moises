@@ -23,7 +23,6 @@
   "homepage": "https://github.com/JKmoises/portafolio-moises#readme",
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "cypress": "^9.5.4",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-cache": "^1.1.3",
