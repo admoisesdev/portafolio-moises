@@ -111,6 +111,10 @@ p {
   font-size: var(--step--1);
 }
 
+li{
+  padding-left: 0;
+}
+
 /*? ********** Components ********** */
 
 /* *** Contact Form *** */
@@ -382,6 +386,7 @@ p {
 
   .modal-content {
     width: auto;
+    margin: auto;
   }
 
   .modal-close {
